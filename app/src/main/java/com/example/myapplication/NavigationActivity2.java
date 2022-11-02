@@ -13,27 +13,23 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapplication.databinding.ActivityNavigationdrawyerBinding;
+import com.example.myapplication.databinding.ActivityNavigation2Binding;
 
-public class NavigationdrawyerActivity extends AppCompatActivity {
-
+public class NavigationActivity2 extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    private ActivityNavigationdrawyerBinding binding;
+    private ActivityNavigation2Binding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-        binding = ActivityNavigationdrawyerBinding.inflate(getLayoutInflater());
+        binding = ActivityNavigation2Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        setSupportActionBar(binding.appBarNavigationdrawyer.toolbar);
-        binding.appBarNavigationdrawyer.fab.setOnClickListener(new View.OnClickListener() {
+        setSupportActionBar(binding.appBarNavigation2.toolbar);
+        binding.appBarNavigation2.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -48,7 +44,7 @@ public class NavigationdrawyerActivity extends AppCompatActivity {
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
                 .setOpenableLayout(drawer)
                 .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigation);
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigation2);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
     }
@@ -56,13 +52,13 @@ public class NavigationdrawyerActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.navigationdrawyer, menu);
+        getMenuInflater().inflate(R.menu.navigation_activity2, menu);
         return true;
     }
 
     @Override
     public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigation);
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigation2);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
