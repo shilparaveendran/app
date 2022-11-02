@@ -18,10 +18,8 @@ import com.example.myapplication.databinding.FragmentSlideshowBinding;
 
 import java.util.ArrayList;
 
-public class SlideshowFragment extends Fragment {
-    Recyclerview recyclerview;
-//    FetchAdapter fetchAdapter;
-    ArrayList<User> list=new ArrayList<>();
+public class LogoutFragment extends Fragment {
+
 
 
     private FragmentSlideshowBinding binding;
@@ -35,15 +33,10 @@ public class SlideshowFragment extends Fragment {
 
         binding = FragmentSlideshowBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        RecyclerView recyclerView = root.findViewById(R.id.recycler_user);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        list =new ArrayList<>();
-//        fetchAdapter= new Student_adapter(getActivity(),list);
-//        recyclerView.setAdapter(fetchAdapter);
-
-
-//        final TextView textView = binding.textSlideshow;
-//        slideshowViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+//        RecyclerView recyclerView = root.findViewById(R.id.recycler_user);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+//        list =new ArrayList<>();
+//
         return root;
     }
 
